@@ -1,2 +1,2 @@
-# finan-as
-Sistema de controle dinanceiro pessoal
+# financas
+Sistema de controle financeiro pessoal
