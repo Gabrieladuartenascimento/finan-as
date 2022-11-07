@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../../components/Button";
+import Graphics from "../../components/Graphics";
 import useAuth from "../../hooks/useAuth";
 import Header from "../../components/Header"
 import Resume from "../../components/Resume";
@@ -56,6 +57,7 @@ const Home = () => {
       <Button Text="Sair" onClick={() => [signout(), navigate("/")]}>
         Sair
       </Button>
+      <Graphics/>
     </>
   );
 };
