@@ -1,10 +1,10 @@
 import React from 'react';
 import {Chart} from "react-google-charts";
 
-const Graphics = () => {
+const Graphics = (total, income) => {
 
     const database = {
-        months: ["7/2022", "9/2022", "10/2022", "11/2022"],
+        months: ["salario", "conta de luz", "conta de agua", "conta de roupa"],
         income: [3500, 2500, 5000, 3000],
         expense: [8000, 6000, 4500, 300],
     };
@@ -30,7 +30,7 @@ const Graphics = () => {
         hAxis: {format: "currency"},
         animation: {duration: 500, easing: "linear", startup: true},
     }
-     
+
 
  return (
    <Chart

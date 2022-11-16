@@ -5,13 +5,14 @@ import * as C from "./styles";
 const Form = ({handleAdd, transactionsList, setTransactionsList }) => {
     const [desc, setDesc] = useState("");
     const [amount, setAmount] = useState("");
+    const [date, setDate] = useState("");
     const [isExpense, setExpense] = useState(false);
  
     const generateID = () => Math.round(Math.random() * 1000);
 
   const handleSave = () => {
-    if (!desc || !amount) {
-      alert("Informe a descrição e o valor!");
+    if (!desc || !amount || !date) {
+      alert("Informe a descrição, valor e a data!");
       return;
     } else if (amount < 1) {
       alert("O valor tem que ser positivo!");
@@ -22,6 +23,7 @@ const Form = ({handleAdd, transactionsList, setTransactionsList }) => {
       id: generateID(),
       desc: desc,
       amount: amount,
+      date: date,
       expense: isExpense,
     };
 
@@ -29,6 +31,7 @@ const Form = ({handleAdd, transactionsList, setTransactionsList }) => {
 
     setDesc("");
     setAmount("");
+    setDate("");
   };
     return(
         <>
@@ -43,6 +46,14 @@ const Form = ({handleAdd, transactionsList, setTransactionsList }) => {
               value={amount}
               type="number"
               onChange={(e) => setAmount(e.target.value)}
+            />
+          </C.InputContent>
+          <C.InputContent>
+            <C.Label>Data de pagar ou receber</C.Label>
+            <C.Input
+            value={date}
+              type="date"
+              onChange={(e) => setDate(e.target.value)}
             />
           </C.InputContent>
           <C.RadioGroup>

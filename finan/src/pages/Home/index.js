@@ -57,7 +57,7 @@ const Home = () => {
       <Button Text="Sair" onClick={() => [signout(), navigate("/")]}>
         Sair
       </Button>
-      <Graphics/>
+      <Graphics income={income} expense={expense} total={total}/>
     </>
   );
 };
