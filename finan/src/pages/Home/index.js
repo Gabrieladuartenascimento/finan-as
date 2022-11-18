@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Button from "../../components/Button";
-import Graphics from "../../components/Graphics";
+import ButtonEnd from "../../components/ButtonEnd";
 import useAuth from "../../hooks/useAuth";
 import Header from "../../components/Header"
 import Resume from "../../components/Resume";
@@ -54,10 +53,9 @@ const Home = () => {
         handleAdd={handleAdd}
         transactionsList={transactionsList}
         setTransactionsList={setTransactionsList}/>
-      <Button Text="Sair" onClick={() => [signout(), navigate("/")]}>
+      <ButtonEnd Text="Sair" onClick={() => [signout(), navigate("/")]}>
         Sair
-      </Button>
-      <Graphics income={income} expense={expense} total={total}/>
+      </ButtonEnd>
     </>
   );
 };

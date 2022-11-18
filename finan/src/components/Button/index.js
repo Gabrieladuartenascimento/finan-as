@@ -6,6 +6,7 @@ const Button = ({Text, onClick, Type = "button"}) => {
         <C.Button type={Type} onClick={onClick}>
             {Text}
         </C.Button>
+        
     );
 };
 
