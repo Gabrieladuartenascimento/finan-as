@@ -18,6 +18,7 @@ const Home = () => {
   const [expense, setExpense] = useState(0);
   const [total, setTotal] = useState(0);
 
+
   useEffect(() => {
     const amountExpense = transactionsList
       .filter((item) => item.expense)
@@ -31,7 +32,7 @@ const Home = () => {
     const income = amountIncome.reduce((acc, cur) => acc + cur, 0).toFixed(2);
 
     const total = Math.abs(income - expense).toFixed(2);
-
+    
     setIncome(`R$ ${income}`);
     setExpense(`R$ ${expense}`);
     setTotal(`${Number(income) < Number(expense) ? "-" : ""}R$ ${total}`);

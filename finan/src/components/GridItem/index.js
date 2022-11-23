@@ -1,4 +1,5 @@
 import React from "react";
+import {format, parseISO} from 'date-fns';
 import * as C from "./styles";
 import{
   FaRegArrowAltCircleUp,
@@ -10,8 +11,8 @@ const GridItem = ({item, onDelete}) => {
     return(
         <C.Tr>
             <C.Td>{item.desc}</C.Td>
-            <C.Td>{item.amount}</C.Td>
-            <C.Td>{item.date}</C.Td>
+            <C.Td>{`R$ ${item.amount}`}</C.Td>
+            <C.Td>{format(parseISO(item.date), 'dd/MM/yyyy')}</C.Td>
             <C.Td alignCenter>
              {item.expense ? (
                 <FaRegArrowAltCircleDown color="red"/>

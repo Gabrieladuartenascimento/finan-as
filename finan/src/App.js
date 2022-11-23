@@ -4,7 +4,8 @@ import RoutesApp from "./routes";
 import { AuthProvider } from "./contexts/auth";
 
 const App = () => {
-  return(
+ 
+   return(
     <AuthProvider>
       <RoutesApp/>
        <GlobalStyle />
